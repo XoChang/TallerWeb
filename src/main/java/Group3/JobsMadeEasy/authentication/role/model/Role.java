@@ -8,9 +8,7 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.Optional;
 
-/**
- * @description: It will handle all the properties of role and business logic for it.
- */
+
 @Component
 public class Role {
     private int roleId;
