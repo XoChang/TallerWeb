@@ -13,7 +13,7 @@ import java.sql.SQLException;
 import static Group3.JobsMadeEasy.authentication.user.controller.login.UserLoginControllerConstant.LOGIN;
 
 /**
- * @description: It will handle all the login related request.
+ * @description: It will handle all the login related request
  */
 @Controller
 public class UserLoginController {
