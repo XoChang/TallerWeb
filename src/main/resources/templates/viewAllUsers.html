@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/"><head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style> table, th, tr,td {
+        border: 2px solid black;}
+
+    #user-table tr:nth-child(even)
+    {
+        background-color: #cccccc;
+    }
+
+    #user-table tr:hover
+    {
+        background-color: #f2f2f2;
+    }
+
+    #user-table th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: cadetblue;
+        color: white;
+    }
+    </style>
+</head>
+<body>
+<h1>View All Users Here</h1>
+<table border="2px solid black" id="user-table">
+    <tr>
+        <th>userId</th>
+        <th>firstName</th>
+        <th>lastName</th>
+        <th>phoneNumber</th>
+        <th>emailId</th>
+        <th>password</th>
+        <th>city</th>
+        <th>province</th>
+        <th>address</th>
+        <th>postalCode</th>
+        <th>roleId</th>
+        <th>isEmployee</th>
+        <th>isApproved</th>
+    </tr>
+    <tr th:each="user:${users}">
+        <th><h4 th:text="${user.userId}"></h4></th>
+        <td><h4 th:text="${user.firstName}"></h4></td>
+        <td><h4 th:text="${user.lastName}"></h4></td>
+        <td><h4 th:text="${user.phoneNumber}"></h4></td>
+        <td><h4 th:text="${user.emailId}"></h4></td>
+        <td><h4 th:text="${user.password}"></h4></td>
+        <td><h4 th:text="${user.city}"></h4></td>
+        <td><h4 th:text="${user.province}"></h4></td>
+        <td><h4 th:text="${user.address}"></h4></td>
+        <td><h4 th:text="${user.postalCode}"></h4></td>
+        <td><h4 th:text="${user.roleId}"></h4></td>
+        <td><h4 th:text="${user.isEmployee}"></h4></td>
+        <td><h4 th:text="${user.isApproved}"></h4></td>
+        <td>
+            <button type="submit" class="button-mail" onclick="clickFunction()" th:attr="data-post-id=${user.emailId}">Send Interview E-mail</button>
+        </td>
+    </tr>
+</table>
+
+
+<script>
+    function clickFunction() {
+        alert("Interview Mail sent successfully.!!");
+    }
+    const mailButtonsList = document.querySelectorAll(".button-mail");
+    console.log(mailButtonsList);
+    mailButtonsList.forEach(mailButton => {
+        mailButton.addEventListener("click", (e) => {
+            const emailId = e.target.dataset.postId;
+            console.log(emailId);
+
+            fetch(`/send_mail/${emailId}`,
+                {
+                    method: "post"
+                });
+        })
+    })
+</script>
+
+</body>
+
+</html>

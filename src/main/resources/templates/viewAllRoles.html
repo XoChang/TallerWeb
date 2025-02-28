@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/"><head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style> table, th, tr,td {
+    border: 2px solid black;}
+
+  #role-table tr:nth-child(even)
+  {
+    background-color: #cccccc;
+  }
+
+  #role-table tr:hover
+  {
+    background-color: #f2f2f2;
+  }
+
+  #role-table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: cadetblue;
+    color: white;
+  }
+  </style>
+</head>
+<body>
+<h1>View All Roles Here</h1>
+<table border="2px solid black" id="role-table">
+  <tr>
+    <th>roleId</th>
+    <th>roleName</th>
+  </tr>
+  <tr th:each="role:${roles}">
+    <th><h4 th:text="${role.roleId}"></h4></th>
+    <td><h4 th:text="${role.roleName}"></h4></td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/"><head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style> table, th, tr, td {
+        border: 2px solid black;
+    }
+
+    #availabilityA tr:nth-child(even) {
+        background-color: #cccccc;
+    }
+
+    #availabilityA tr:hover {
+        background-color: #f2f2f2;
+    }
+
+    #availabilityA th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: cadetblue;
+        color: white;
+    }
+    </style>
+</head>
+<body>
+<h1>View All Availability Here</h1>
+    <table border="2px solid black" id="availabilityA">
+        <tr>
+            <th>User ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>available Days</th>
+            <th>available Hours</th>
+
+        </tr>
+        <tr th:each="availability:${availabilities}">
+
+            <th><h4 th:text="${availability.userId}"></h4></th>
+            <td><h4 th:text="${availability.firstName}"></h4></td>
+            <td><h4 th:text="${availability.lastName}"></h4></td>
+            <td><h4 th:text="${availability.availableDays}"></h4></td>
+            <td><h4 th:text="${availability.availableHours}"></h4></td>
+
+        </tr>
+    </table>
+</body>
+</html>

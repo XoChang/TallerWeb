@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet">
+    <title>Title</title>
+    <style>
+        h1 {
+            background-color: cadetblue;
+        }
+
+        .Home-div {
+            text-align: center;
+        }
+
+        .each-btn {
+            margin: 10px;
+        }
+
+        .each-btn {
+            text-color: red;
+        }
+    </style>
+</head>
+<body>
+<div class="Home-div">
+    <h1 style="
+    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-top: 20px;
+    margin-top: 0px;
+    color: white;
+"> Welcome ADMIN </h1>
+
+    <form class="each-btn" action="/view_all_users">
+        <input type="submit" value="View All Users" style="
+    padding-top: 10px;
+    padding-bottom: 10px;">
+    </form>
+    <form class="each-btn" action="/delete_user_by_id">
+        <input type="submit" value="Delete User By Id" style="
+    padding-top: 10px;
+    padding-bottom: 10px;">
+    </form>
+    <form class="each-btn" action="/view_all_roles">
+        <input type="submit" value="View All Roles" style="
+    padding-top: 10px;
+    padding-bottom: 10px;">
+    </form>
+    <form class="each-btn" action="/delete_role_by_id">
+        <input type="submit" value="Delete Role By Id" style="
+    padding-top: 10px;
+    padding-bottom: 10px;">
+    </form>
+    <form class="each-btn" action="/logout">
+        <input type="submit" onclick="A()" value="Logout" style="
+    padding-top: 10px;
+    padding-bottom: 10px;">
+    </form>
+</div>
+<script>
+    function A() {
+        function logoutFunction() {
+            window.history.forward()
+        }
+        logoutFunction();
+        window.onload = logoutFunction;
+        window.onpageshow = function (evt) {
+            if (evt.persisted) logoutFunction()
+        }
+        window.onunload = function () {
+            void (0)
+        }
+    }
+</script>
+</body>

@@ -13,8 +13,12 @@ import java.util.Optional;
 
 import static Group3.JobsMadeEasy.authentication.user.controller.registration.UserRegistrationControllerConstant.*;
 
+/**
+ * @description: It will handle all the registration related request.
+ */
 @Controller
 public class UserRegistrationController {
+
     private final User user;
 
     public UserRegistrationController(IUserLoginDao userLoginDao, IUserRegistrationDao userRegistrationDao){

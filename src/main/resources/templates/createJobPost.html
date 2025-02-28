@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <meta charset="utf-8">
+    <title>Create Job post Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+</head>
+<style>
+    h1 {
+        background-color: cadetblue;
+    }
+
+    .list {
+        margin-top: 20px;
+
+    }
+</style>
+<body class="registration_form" data-new-gr-c-s-check-loaded="14.1087.0" data-gr-ext-installed="">
+<div class="new_user_form">
+    <div class="content">
+        <div id="errorMessage"></div>
+        <form method="post" id="form" th:action="@{/add_job_post}" th:object="${jobPost}">
+
+            <div class="contact_details">
+                <h1 style="
+                    margin-top: 0px;
+                     padding-top: 15px;
+                     padding-bottom: 15px;">Enter job details to create Post</h1>
+                <div class="list">
+                    <label>Job Title: </label><br>
+                    <input type="text" id="jobTitle" placeholder="Job Title" th:field="*{jobTitle}">
+                </div>
+                <div class="list">
+                    <label>Salary: </label><br>
+                    <input type="text" id="salary" placeholder="Salary" th:field="*{salary}">
+                </div>
+                <div class="list">
+                    <label>Type of Job: </label><br>
+                    <input type="text" id="jobType" placeholder="Job Type" th:field="*{jobType}">
+                </div>
+                <div class="list">
+                    <label>Job Description: </label><br>
+                    <input id="jobDescription" type="text" style="height: 10rem; width: 30rem;"
+                           placeholder="Job Decription" th:field="*{jobDescription}">
+                </div>
+                <div class="list">
+                    <label>Job Location: </label><br>
+                    <input type="text" name="jobLocation" id="jobLocation" placeholder="Job Location"
+                           th:field="*{jobLocation}">
+                </div>
+                <div class="list">
+                    <label>Language Required: </label><br>
+                    <input type="text" name="language" id="language" placeholder="Language Requirements"
+                           th:field="*{languageRequirements}">
+                </div>
+                <div class="list">
+                    <button type="submit" class="button">CREATE JOB POST</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+
+    const form = document.getElementById('form')
+    const title = document.getElementById('jobTitle')
+    const salary = document.getElementById('salary')
+    const jobType = document.getElementById('jobType')
+    const jobDescription = document.getElementById('jobDescription')
+    const jobLocation = document.getElementById('jobLocation')
+    const language = document.getElementById('language')
+    const errorMessage = document.getElementById('errorMessage')
+
+    form.addEventListener('submit', (e) => {
+        let messages = []
+        if (title.value === '' || title.value == null) {
+            messages.push('Title can not be empty!!')
+        }
+        if (salary.value === '' || salary.value == null) {
+            messages.push('Salary can not be empty!!')
+        }
+        if (jobType.value === '' || jobType.value == null) {
+            messages.push('Job title can not be empty!!')
+        }
+        if (jobDescription.value === '' || jobDescription.value == null) {
+            messages.push('Job description can not be empty!!')
+        }
+        if (jobDescription.value < 20) {
+            messages.push('Job description should be in detail!!')
+        }
+        if (jobLocation.value === '' || jobLocation.value == null) {
+            messages.push('Job description can not be empty!!')
+        }
+        if (language.value === '' || language.value == null) {
+            messages.push('Language can not be empty!!')
+        }
+
+        if (messages.length > 0) {
+            e.preventDefault()
+            errorMessage.innerText = messages.join(' \n')
+        } else {
+            alert("Job post created successfully.!!")
+        }
+    })
+
+</script>
+</body>
+</html>

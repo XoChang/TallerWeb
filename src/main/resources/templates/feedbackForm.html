@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" th:href="@{/style/project.css}"/>
+</head>
+<body>
+<form class="feedback_form" method="post" th:action="@{/save/feedback}" th:object="${feedback}" required>
+
+    <div class="nav_bar">
+        <ul>
+            <li><a class="active" href="/register">Register</a></li>
+            <li><a class="active_1" href="/login">Login</a></li>
+        </ul>
+    </div>
+
+
+    <div class="feedback_details">FEEDBACK FORM</div><br><br>
+    <div class="feedback_form_details">
+
+
+        <div class="feedback_1"> Experience <br>
+            <input type="text" name="experience" id="experiencee" class="input_text" placeholder="Please provide your experience with us" th:field="*{experience}" required>
+        </div><br>
+
+        <div class="feedback_2"> Comments <br>
+            <input type="text" name="comments" id="comments" class="input_text" placeholder="Comments" th:field="*{comments}" required>
+        </div><br>
+
+        <div class="feedback_3"> Over All Rating <br>
+            <select name="overAllRating" style="width: 21rem;height: 3rem" id="overAllRating">
+                <option value="overAllRating">Rating</option>
+                <option value="good">Good</option>
+                <option value="satisfactory">Satisfactory</option>
+                <option value="bad">Bad</option>
+            </select>
+        </div>
+        <button type="submit" class="submit_feedback" >
+            <a>Submit</a>
+        </button>
+
+
+</div>
+</form>
+</body>
+</html>
