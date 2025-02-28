@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style> table, th, tr, td {
+        border: 2px solid black;
+    }
+
+    #application-table tr:nth-child(even) {
+        background-color: #cccccc;
+    }
+
+    #application-table tr:hover {
+        background-color: #f2f2f2;
+    }
+
+    #application-table th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: cadetblue;
+        color: white;
+    }
+    </style>
+</head>
+<body>
+<h1>All applications for available jobs</h1>
+<table border="2px solid black" id="application-table" style="float:left">
+    <tr>
+        <th>Application Id</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Expected Salary</th>
+        <th>Current Employment Status</th>
+        <th>Pass-out Year</th>
+        <th>Application Type</th>
+        <th>Study Field</th>
+        <th>Degree Type</th>
+        <th>University</th>
+        <th>Expertise One</th>
+        <th>Expertise Two</th>
+        <th>Expertise Three</th>
+    </tr>
+    <tr th:each="jobApplication:${jobApplications}">
+        <th><h4 th:text="${jobApplication.applicationId}"></h4></th>
+        <td><h4 th:text="${jobApplication.firstName}"></h4></td>
+        <td><h4 th:text="${jobApplication.lastName}"></h4></td>
+        <td><h4 th:text="${jobApplication.expectedSalary}"></h4></td>
+        <td><h4 th:text="${jobApplication.currentEmployeeStatus}"></h4></td>
+        <td><h4 th:text="${jobApplication.yearPassOut}"></h4></td>
+        <td><h4 th:text="${jobApplication.applicationType}"></h4></td>
+        <td><h4 th:text="${jobApplication.studyField}"></h4></td>
+        <td><h4 th:text="${jobApplication.degreeType}"></h4></td>
+        <td><h4 th:text="${jobApplication.university}"></h4></td>
+        <td><h4 th:text="${jobApplication.expertOne}"></h4></td>
+        <td><h4 th:text="${jobApplication.expertTwo}"></h4></td>
+        <td><h4 th:text="${jobApplication.expertThree}"></h4></td>
+    </tr>
+</table>
+</body>
+</html>

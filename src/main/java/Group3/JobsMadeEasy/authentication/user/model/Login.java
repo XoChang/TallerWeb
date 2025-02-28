@@ -1,6 +1,8 @@
 package Group3.JobsMadeEasy.authentication.user.model;
 
-
+/**
+ * @description: It will handle all the properties of login and business logic for it.
+ */
 public class Login {
 
     private String emailId;

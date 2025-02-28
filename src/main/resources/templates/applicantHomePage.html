@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/style/project.css}"/>
+</head>
+<body>
+<div class="applicantHomePage">
+    <div class="nav_bar">
+        <ul>
+            <li><a class="active" href="/register">Register</a></li>
+            <li><a class="active_1" href="/login">Login</a></li>
+        </ul>
+    </div>
+
+
+    <div class="welcome">WELCOME <span th:text="${session.currentName}"/> TO JOBS MADE EASY</div>
+    <br><br>
+
+    <div class="border">
+        <div class="my_application">MY APPLICATION
+            <br>
+            <a href="/create_job_application" class="button_1">Apply</a>
+            <br><br>
+        </div>
+
+        <div class="view_all_jobs">VIEW ALL AVAILABLE JOBS
+            <br>
+            <a href="/view_all_jobs" class="button_2">View</a><br></div>
+
+        <div class="provide_availability">AVAILABILITY<br>
+            <a href="/availability_home_page" class="button_4">Provide</a><br></div>
+
+        <div class="delete_application">FEEDBACK
+            <br>
+            <a href="/create_feedback_form" class="button_3">Feedback</a><br></div>
+
+    <div class="logout_application">LOGOUT
+        <br>
+        <a href="/logout" onclick="A()" class="button_5">Logout</a><br></div>
+    </div>
+
+</div>
+<script>
+    function A() {
+
+
+        function logoutFunction() {
+            window.history.forward()
+        }
+
+        logoutFunction();
+        window.onload = logoutFunction;
+        window.onpageshow = function (evt) {
+            if (evt.persisted) logoutFunction()
+        }
+        window.onunload = function () {
+            void (0)
+        }
+    }
+</script>
+</body>
+</html>

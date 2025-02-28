@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" th:href="@{/style/project.css}"/>
+</head>
+<body>
+<form class="application_form" method="post" th:action="@{/save/jobApplication}"
+      th:object="${jobApplication}">
+
+    <div class="nav_bar">
+        <ul>
+            <li><a class="active" href="/register">Register</a></li>
+            <li><a class="active_1" href="/login">Login</a></li>
+        </ul>
+    </div>
+    <div class="application_form_details">APPLICATION FORM</div>
+    <br><br>
+    <div class="forms_details">
+
+        <div class="part_1"> First Name <br>
+            <input type="text" name="firstName" id="firstName" class="input_text"
+                   placeholder="Enter your First Name"
+                   th:field="*{firstName}">
+        </div>
+        <br>
+
+        <div class="part_2"> Last Name <br>
+            <input type="text" name="lastName" id="lastName" class="input_text"
+                   placeholder="Enter your Last Name"
+                   th:field="*{lastName}">
+        </div>
+        <br>
+
+        <div class="part_3"> Salary Expectations <br>
+            <input type="text" name="expectedSalary" id="expectedSalary" class="input_text"
+                   placeholder="Enter your salary expectations" th:field="*{expectedSalary}">
+        </div>
+        <br>
+
+        <div class="part_4"> Employment Status <br>
+            <select name="currentEmployeeStatus" th:field="*{currentEmployeeStatus}" style="width: 13rem; height: 3rem">
+                <option value="status">Status</option>
+                <option value="employed">Employed</option>
+                <option value="unemployed">Unemployed</option>
+                <option value="student">Student</option>
+            </select></div>
+
+        <div class="part_5"> Pass out Year <br>
+            <input type="text" name="yearPassOut" id="yearPassOut" class="input_text"
+                   placeholder="Enter your Passing Year" th:field="*{yearPassOut}">
+        </div>
+        <br>
+
+        <div class="part_6"> Application Type<br>
+            <select name="applicationType" th:field="*{applicationType}" style="width: 13rem; height: 3rem">
+                <option value="application type">Application Type</option>
+                <option value="part_time">Part-Time</option>
+                <option value="full_time">Full-Time</option>
+            </select></div>
+
+        <div class="part_7"> Study Field <br>
+            <input type="text" name="studyField" id="studyField" class="input_text"
+                   placeholder="Enter your field of study" th:field="*{studyField}" required>
+        </div>
+        <br>
+
+        <div class="part_8"> Degree Type <br>
+            <input type="text" name="degreeType" id="degreeType" class="input_text"
+                   placeholder="Enter your Last Degree" th:field="*{degreeType}" required>
+        </div>
+        <br>
+
+        <div class="part_9">University Name <br>
+            <input type="text" name="universityName" id="university" class="input_text"
+                   placeholder="Enter your University Name" th:field="*{university}" required>
+        </div>
+        <br>
+
+        <div class="part_10"> Expertise One <br>
+            <input type="text" name="expertOne" id="expertOne" class="input_text"
+                   placeholder="Enter your Expertise" th:field="*{expertOne}" required>
+        </div>
+        <br>
+
+        <div class="part_11"> Expertise Two <br>
+            <input type="text" name="expertTwo" id="expertTwo" class="input_text"
+                   placeholder="Enter your Expertise" th:field="*{expertTwo}" required>
+        </div>
+        <br>
+
+        <div class="part_12"> Expertise Three <br>
+            <input type="text" name="expertThree" id="expertThree" class="input_text"
+                   placeholder="Enter your Expertise" th:field="*{expertThree}" required>
+        </div>
+        <br>
+        <div class="part"> Enter Job iD <br>
+            <input type="text" name="jobPostId" id="jobPostId" class="input_text"
+                   placeholder="Enter your Job Id" th:field="*{jobPostId}">
+        </div>
+        <br>
+        <button type="submit" class="submit_application">
+            <a>Submit</a>
+        </button>
+
+        </form>
+    </div>
+</form>
+</body>
+</html>

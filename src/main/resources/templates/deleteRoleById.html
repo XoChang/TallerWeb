@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style> table, th, tr,td {
+    border: 2px solid black;}</style>
+</head>
+<body>
+<h1>Delete User Here</h1>
+<table border="2px solid black">
+  <tr>
+    <th>roleId</th>
+    <th>roleName</th>
+  </tr>
+  <tr th:each="role:${role}">
+    <th><h4 th:text="${role.roleId}"></h4></th>
+    <td><h4 th:text="${role.roleName}"></h4></td>
+    <td>
+      <!--            <form th:action="@{/temp-delete-post/{id}(id=${jobPosts.jobPostId})}" method="post" th:attr="data-post-id=${jobPosts.jobPostId}" class="form">-->
+      <!--                <button type="submit"  class="button&#45;&#45;delete" onclick="location.href='deleteJobById.html'">Delete job</button>-->
+      <!--            </form>-->
+      <button type="submit" class="button--delete" th:attr="data-post-id=${role.roleId}">Delete User</button>
+      <!--            <form th:action="@{/temp-delete-post/{id}(id=${jobPosts.jobPostId})}" method="post" th:attr="data-post-id=${jobPosts.jobPostId}" class="form">-->
+      <!--            </form>-->
+
+    </td>
+  </tr>
+</table>
+
+<script>
+  const deleteButtonsList = document.querySelectorAll(".button--delete");
+  console.log(deleteButtonsList);
+  deleteButtonsList.forEach(deleteButton => {
+    deleteButton.addEventListener("click", (e) => {
+      const id = e.target.dataset.postId;
+      console.log(id);
+
+      fetch(`/delete_role_by_id/${id}`,
+              {
+                method: "delete"
+              }).then((res) => res.json()).then(data => location.reload());
+
+    })
+    // deleteButton.addEventListener("submit", (e) => {
+    //     e.preventDefault();
+    //     const id = e.target.dataset.postId;
+    //     e.target.closest(".form").setAttribute("action", `\${/delete_job_post_by_id/${id}`);
+    //     e.target.closest(".form").setAttribute("method", "post")
+    //
+    //     console.log(e.target.closest(".form").getAttribute("action"));
+    // })
+  })
+</script>
+
+</body>
+</html>

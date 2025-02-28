@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="/style/project.css">
+</head>
+<body class="registration_form">
+<div class="new_user_form">
+    <div class="content">
+        <form class="user_details" method="post" id="proj_form" th:action="@{/auth/login}" th:object="${login}">
+            <div class="nav_bar">
+                <ul>
+                    <li><a class="active" href="/register">Register</a></li>
+                    <li><a class="active_1" href="/login">Login</a></li>
+                </ul>
+            </div>
+            <div class="general_details">
+                <div th:if="${param.success}">
+                    <div class="alert alert-info" style="margin-top: 10px">You've entered incorrect details.</div>
+                </div>
+                <div class="contact_details_1">
+                    <h2>LOGIN</h2>
+                    <div class="list">
+                        <input type="text" name="email_id" id="email_id" class="login_email" required pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" placeholder="Email Id" th:field="*{emailId}">
+                    </div>
+                    <div class="list">
+                        <input type="password" name="password" class="login_password" id="password" placeholder="Create Password" th:field="*{password}" required>
+                    </div>
+                    <button type="submit" class="login_submit" >
+                        <a>Submit</a>
+                    </button>
+                    </div>
+                </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

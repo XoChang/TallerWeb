@@ -12,6 +12,9 @@ import java.util.Optional;
 
 import static Group3.JobsMadeEasy.authentication.user.controller.login.UserLoginControllerConstant.LOGIN_WARNING;
 
+/**
+ * @description: It will handle all the properties of user and business logic for it.
+ */
 @Component
 public class User {
 

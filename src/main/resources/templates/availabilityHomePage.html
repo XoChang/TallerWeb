@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet">
+    <title>Title</title></head>
+<style>
+    h1 {
+        background-color: cadetblue;
+    }
+
+    .Home-div {
+        text-align: center;
+    }
+
+    .each-btn {
+        margin: 10px;
+
+    }
+
+    .each-btn {
+        text-color: red;
+    }
+</style>
+
+<body>
+<div>
+
+<div  class="Home-div">
+    <h1> Welcome <span th:text="${session.currentName}" /> </h1>
+
+    <form class="each-btn" action="/add_availability_form">
+        <input type="submit" value="Add Availability" style="
+    padding-top: 10px; text-align: center;
+    padding-bottom: 10px;">
+    </form>
+
+    <form class="each-btn" th:action="@{/view_my_availability/{path}(path=${session.currentId})}">
+        <input type="submit" value="View Availability" style="
+    padding-top: 10px;text-align: center;
+    padding-bottom: 10px;">
+    </form>
+
+    <form class="each-btn" th:action="@{/delete_availability_by_id/{path}(path=${session.currentId})}">
+        <input type="submit" value="Delete Availability" style="
+    padding-top: 10px; text-align: center;
+    padding-bottom: 10px;">
+    </form>
+</div>
+</div>
+</body>

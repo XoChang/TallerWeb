@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/"><head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style> table, th, tr, td {
+        border: 2px solid black;
+    }
+
+    #my-availability tr:nth-child(even) {
+        background-color: #cccccc;
+    }
+
+    #my-availability tr:hover {
+        background-color: #f2f2f2;
+    }
+
+    #my-availability th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: cadetblue;
+        color: white;
+    }
+    </style>
+</head>
+<body>
+<h1>View My Availability Here</h1>
+<table border="2px solid black" id="my-availability">
+    <tr>
+        <th>availabilityId</th>
+        <th>availableDays</th>
+        <th>availableHours</th>
+        <th>userId</th>
+
+    </tr>
+
+    <tr th:each="availability:${availabilities}">
+        <th><h4 th:text="${availability.availabilityId}"></h4></th>
+        <td><h4 th:text="${availability.availableDays}"></h4></td>
+        <td><h4 th:text="${availability.availableHours}"></h4></td>
+        <td><h4 th:text="${availability.userId}"></h4></td>
+
+    </tr>
+
+
+
+
+    </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,533 @@
+.general_details{
+	position: absolute;
+	top: 8rem;
+	left: -14rem;
+	height: 115rem;
+	width: 100rem;
+	font-size: 2rem;
+	text-align: center;
+}
+
+
+
+header .header{
+	background-color: #fff;
+	height: 45px;
+}
+
+.login_page {
+	width: 360px;
+	padding: 8% 0 0;
+	margin: auto;
+}
+.login_page .login_form .login{
+	margin-top: -31px;
+	margin-bottom: 26px;
+}
+.login_form {
+	position: relative;
+	z-index: 1;
+	background: #FFFFFF;
+	max-width: 360px;
+	margin: 0 auto 100px;
+	padding: 45px;
+	text-align: center;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.login_form input {
+	font-family: "Roboto", sans-serif;
+	outline: 0;
+	background: #f2f2f2;
+	width: 100%;
+	border: 0;
+	margin: 0 0 15px;
+	padding: 15px;
+	box-sizing: border-box;
+	font-size: 14px;
+}
+.login_form button {
+	font-family: "Roboto", sans-serif;
+	text-translogin_form: uppercase;
+	outline: 0;
+	background-color: #10100f;
+	/* background-image: linear-gradient(45deg,#328f8a,#08ac4b); */
+	width: 100%;
+	border: 0;
+	padding: 15px;
+	color: #FFFFFF;
+	font-size: 14px;
+	cursor: pointer;
+}
+.login_form .credentials {
+	margin: 15px 0 0;
+	color: #b3b3b3;
+	font-size: 12px;
+}
+.login_form .credentials a {
+	color: #10100f;
+	text-decoration: none;
+}
+
+.container {
+
+	z-index: 1;
+
+	/* max-width: 300px; */
+
+	margin: 0 auto;
+
+	position: absolute !important;
+
+	left: -1rem !important;
+
+	top: 34rem !important;
+
+	font-size: 1rem;
+}
+
+body {
+	background-color: #ffffff;
+	background-image: linear-gradient(45deg,#328f8a,#08ac4b);
+	font-family: "Roboto", sans-serif;
+	position: absolute;
+	top: -6rem;
+	left: 2rem;
+	height: 30rem;
+	width: 100%;
+}
+.heading{
+	color: #010101;
+	font-size: 6rem;
+	position: absolute;
+	top: 20rem;
+	left: 5rem;
+}
+.nav_bar ul {
+	list-style-type: none !important;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	/* background-color: #110e0d; */
+	font-size: 1.5rem;
+	display: inline;
+}
+
+nav_bar li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+.welcome{
+	color: #010101;
+	position: absolute;
+	top: 14rem;
+	left: 7rem;
+	font-size: 3rem;
+}
+.border{
+	position: absolute;
+	top: 22rem;
+	left: 9rem;
+	border-color: #010101;
+	border-style: solid;
+	height: 42rem;
+	width: 45rem;
+}
+.my_application,
+.view_all_jobs,
+.provide_availability,
+.delete_application,
+.logout_application{
+	font-size: 1.7rem;
+	text-align: center;
+}
+
+.view_all_jobs{
+	position: absolute;
+	top: 1rem;
+	left: 11rem;
+}
+
+.provide_availability{
+	position: absolute;
+	top: 17rem;
+	left: 17rem;
+}
+
+.delete_application{
+	position: absolute;
+	top: 25rem;
+	left: 18rem;
+}
+.my_application{
+	position: absolute;
+	top: 9rem;
+	left: 15rem;
+}
+
+.forms_details{
+	position: absolute;
+	top: 15rem;
+	left: 6rem;
+	border-style: solid;
+	border-color: #010101;
+	width: 53rem;
+	height: 51rem;
+}
+.application_form_details{
+	color: #010101;
+	position: absolute;
+	top: 10rem;
+	left: 17rem;
+	font-size: 3rem;
+}
+
+.part,
+.part_1,
+.part_2,
+.part_3,
+.part_4,
+.part_5,
+.part_6,
+.part_7,
+.part_8,
+.part_9,
+.part_10,
+.part_11,
+.part_12{
+	font-size: 1.6rem;
+	text-align: center;
+}
+
+.part{
+	position: absolute;
+	top: 2rem;
+	left: 17rem;
+}
+
+
+.part_1{
+	position: absolute;
+	top: 9rem;
+	left: 5rem;
+}
+.part_2
+{
+	position: absolute;
+	top: 9rem;
+	left: 30rem;
+}
+.part_3{
+	position: absolute;
+	top: 15rem;
+	left: 5rem;
+}
+.part_4{
+	position: absolute;
+	top: 15rem;
+	left: 31rem;
+}
+.part_5{
+	position: absolute;
+	top: 21rem;
+	left: 5rem;
+}
+.part_6{
+	position: absolute;
+	top: 32rem;
+	left: 20rem;
+}
+
+.part_7{
+	position: absolute;
+	top: 21rem;
+	left: 30rem;
+}
+.part_8{
+	position: absolute;
+	top: 27rem;
+	left: 5rem;
+}
+.part_9{
+	position: absolute;
+	top: 27rem;
+	left: 30rem;
+}
+.part_10{
+	position: absolute;
+	top: 39rem;
+	left: 1rem;
+}
+.part_11{
+	position: absolute;
+	top: 39rem;
+	left: 18rem;
+}
+.part_12{
+	position: absolute;
+	top: 39rem;
+	left: 35rem;
+}
+.application_form input{
+	width: 16rem;
+	height: 2rem;
+}
+.submit_application{
+	position: absolute;
+	top: 47rem;
+	left: 16rem;
+	font-size: 2rem;
+	background: #29b6f6;
+	border-radius: 27rem;
+	width: 22rem;
+	height: 2.8rem;
+	text-align: center;
+	text-decoration: none;
+}
+.nav_bar{
+	background-color: #87c6f4;
+	height: 4rem;
+	position: absolute;
+	top: 5rem;
+	left: -3rem;
+	width: 85rem;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333;
+}
+li {
+	float: left;
+}
+
+li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+li a:hover {
+	background-color: #111;
+}
+.button_1,
+.button_2,
+.button_3,
+.button_4,
+.button_5{
+	position: absolute;
+	border-style: solid;
+	border-color: #010101;
+	height: 2rem;
+	width: 13rem;
+	border-radius: 2rem;
+}
+.button_1{
+	top: 4rem;
+	left: 1rem;
+}
+
+.button_2{
+	top: 4rem;
+	left: 5rem;
+}
+
+.button_3{
+	top: 4rem;
+	left: -2rem;
+}
+
+.button_4{
+	top: 4rem;
+	left: -1rem;
+}
+
+.button_5{
+	top: 3rem;
+	left: -2rem;
+}
+
+.avail_submit{
+	position: absolute;
+	top: 42rem;
+	left: 16rem;
+}
+.feedback_details{
+	color: #010101;
+	position: absolute;
+	top: 11rem;
+	left: 19rem;
+	font-size: 3rem;
+}
+.feedback_1,
+.feedback_2,
+.feedback_3{
+	font-size: 2rem;
+	text-align: center;
+}
+.feedback_1{
+	position: absolute;
+	top: 17rem;
+	left: 8rem;
+}
+.feedback_2{
+	position: absolute;
+	top: 17rem;
+	left: 35rem;
+}
+.feedback_3{
+	position: absolute;
+	top: 31rem;
+	left: 21rem;
+}
+.feedback_form_details input{
+	width: 19rem;
+	height: 10rem;
+}
+.submit_feedback{
+	position: absolute;
+	top: 42rem;
+	left: 20rem;
+	font-size: 2rem;
+	background: #29b6f6;
+	border-radius: 27rem;
+	width: 22rem;
+	height: 2.8rem;
+	text-align: center;
+	text-decoration: none;
+}
+.index_heading{
+	position: absolute;
+	top: 12rem;
+	left: -1rem;
+	font-size: 3rem;
+	text-align: center;
+}
+.login_submit{
+	position: absolute !important;
+	top: 30rem;
+	left: -3rem;
+	font-size: 2rem;
+	background: #29b6f6;
+	border-radius: 27rem;
+	width: 22rem;
+	height: 2.8rem;
+	text-align: center;
+	text-decoration: none;
+}
+.register_submit{
+	position: absolute;
+	top: 61rem;
+	left: 28rem;
+	font-size: 1.5rem;
+	background: #29b6f6;
+	border-radius: 27rem;
+	width: 22rem;
+	height: 2.8rem;
+	text-align: center;
+	text-decoration: none;
+}
+.contact_details{
+	position: absolute;
+	top: 20rem;
+	left: 28rem;
+	font-size: 2rem;
+	text-align: center;
+}
+.contact_details_1{
+	position: absolute;
+	top: 1rem;
+	left: 43rem;
+	font-size: 3rem;
+	text-align: center;
+}
+.street{
+	position: absolute;
+	top: 8rem;
+	left: -11rem;
+	width: 43rem;
+	height: 3rem;
+}
+.zip{
+	position: absolute;
+	top: 15rem;
+	left: -11rem;
+	width: 19rem;
+	height: 3rem;
+}
+
+.city{
+	position: absolute;
+	top: 15rem;
+	left: 13rem;
+	width: 19rem;
+	height: 3rem;
+}
+.firstName{
+	position: absolute;
+	top: 8rem;
+	left: 30rem;
+	width: 19rem;
+	height: 3rem;
+}
+.lastName{
+	position: absolute;
+	top: 8rem;
+	left: 53rem;
+	width: 19rem;
+	height: 3rem;
+}
+.phone_number{
+	position: absolute;
+	top: 21rem;
+	left: 13rem;
+	width: 19rem;
+	height: 3rem;
+}
+.province{
+	position: absolute;
+	top: 21rem;
+	left: -11rem;
+	width: 19.5rem;
+	height: 3.5rem;
+}
+.password{
+	position: absolute;
+	top: 27rem;
+	left: 13rem;
+	width: 19rem;
+	height: 3rem;
+}
+.email_id{
+	position: absolute;
+	top: 27rem;
+	left: -11rem;
+	width: 19rem;
+	height: 3rem;
+}
+.login_password{
+	position: absolute;
+	top: 21rem;
+	left: 13rem;
+	width: 19rem;
+	height: 3rem;
+}
+.login_email{
+	position: absolute;
+	top: 21rem;
+	left: -11rem;
+	width: 19rem;
+	height: 3rem;
+}
+.logout_application{
+	position: absolute;
+	top: 34rem;
+	left: 18rem;
+}

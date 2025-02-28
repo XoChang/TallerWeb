@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style> table, th, tr, td {
+        border: 2px solid black;
+    }
+
+    #delete-availability tr:nth-child(even) {
+        background-color: #cccccc;
+    }
+
+    #delete-availability tr:hover {
+        background-color: #f2f2f2;
+    }
+
+    #delete-availability th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: cadetblue;
+        color: white;
+    }
+    </style>
+</head>
+<body>
+<h1>Delete Availability Here</h1>
+<table border="2px solid black" id="delete-availability">
+    <tr>
+        <th>availabilityId</th>
+        <th>availableDays</th>
+        <th>availableHours</th>
+        <th>userId</th>
+
+    </tr>
+    <tr th:each="availability:${availability}">
+        <th id="post-id" ><h4 th:text="${availability.availabilityId}"></h4></th>
+        <td><h4 th:text="${availability.availableDays}"></h4></td>
+        <td><h4 th:text="${availability.availableHours}"></h4></td>
+        <td><h4 th:text="${availability.userId}"></h4></td>
+
+        <td>
+
+            <button type="submit" class="button--delete" th:attr="data-post-id=${availability.availabilityId}">Delete Availability</button>
+
+
+        </td>
+    </tr>
+</table>
+
+<script>
+    const deleteButtonsList = document.querySelectorAll(".button--delete");
+    console.log(deleteButtonsList);
+    deleteButtonsList.forEach(deleteButton => {
+        deleteButton.addEventListener("click", (e) => {
+            const id = e.target.dataset.postId;
+            console.log(id);
+
+            fetch(`/delete_availability/${id}`,
+                {
+                method: "delete"
+            }).then((res) => res.json()).then(data => location.reload());
+
+        })
+
+    })
+</script>
+
+</body>
+</html>
