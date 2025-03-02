@@ -1,0 +1,146 @@
+openapi: 3.1.3
+info:
+  title: Taller Web - Grupo 3
+  description: |-
+    \-Ortega Moran Kenneth Evander  
+    \-Liñan Paredes, Saul Alexander  
+    \-Zapata Aguinaga, Fabio Sthefano Sneyder  
+    \-Román Céspedes, Samuel Aarón  
+    \-Saenz Peña, Jesus Angel  
+    \-Cabrera Ccancce Alexis Ronni
+  version: 1.0.0
+  contact: {}
+servers:
+  - url: http://localhost:8000
+paths:
+  /auth/register:
+    post:
+      summary: Register user
+      description: >-
+        This is a POST request, submitting data to an API via the request body.
+        This request submits JSON data, and the data is reflected in the
+        response.
+
+
+        A successful POST request typically returns a `200 OK` or `201 Created`
+        response code.
+      operationId: registerUser
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                address:
+                  type: string
+                  example: addressss
+                checkbox:
+                  type: string
+                  example: 'on'
+                city:
+                  type: string
+                  example: Lima
+                emailId:
+                  type: string
+                  example: iiiiii@iiii.com
+                firstName:
+                  type: string
+                  example: user2
+                lastName:
+                  type: string
+                  example: us
+                password:
+                  type: string
+                  example: '12345678'
+                phoneNumber:
+                  type: string
+                  example: '5874487'
+                postalCode:
+                  type: string
+                  example: '1524'
+            example:
+              address: addressss
+              checkbox: 'on'
+              city: Lima
+              emailId: iiiiii@iiii.com
+              firstName: user2
+              lastName: us
+              password: '12345678'
+              phoneNumber: '5874487'
+              postalCode: '1524'
+      responses:
+        '200':
+          description: ''
+  /auth/login:
+    post:
+      summary: Login
+      description: Login
+      operationId: login
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                emailId:
+                  type: string
+                  example: samu@samu.com
+                password:
+                  type: string
+                  example: root123
+            example:
+              emailId: samu@samu.com
+              password: root123
+      responses:
+        '200':
+          description: ''
+  /view_all_users:
+    get:
+      summary: All users
+      description: All users
+      operationId: allUsers
+      parameters:
+        - name: Cookie
+          in: query
+          schema:
+            type: string
+            example: >-
+              __hstc=181257784.17400c2087d4f771fe40dfe1123596e0.1728485503318.1728485503318.1728485503318.1;
+              hubspotutk=17400c2087d4f771fe40dfe1123596e0;
+              __stripe_mid=ff1713b6-14f3-4d70-a9ca-476f77737db20a5e53;
+              JSESSIONID=45305AC1671CB26429C83FBD64F0052E
+        - name: Cookie
+          in: header
+          schema:
+            type: string
+            example: >-
+              __hstc=181257784.17400c2087d4f771fe40dfe1123596e0.1728485503318.1728485503318.1728485503318.1;
+              hubspotutk=17400c2087d4f771fe40dfe1123596e0;
+              __stripe_mid=ff1713b6-14f3-4d70-a9ca-476f77737db20a5e53;
+              JSESSIONID=45305AC1671CB26429C83FBD64F0052E
+      responses:
+        '200':
+          description: ''
+  /view_all_roles:
+    get:
+      summary: All roles
+      description: All roles
+      operationId: allRoles
+      parameters:
+        - name: Cookie
+          in: query
+          schema:
+            type: string
+        - name: Cookie
+          in: header
+          schema:
+            type: string
+            example: >-
+              __hstc=181257784.17400c2087d4f771fe40dfe1123596e0.1728485503318.1728485503318.1728485503318.1;
+              hubspotutk=17400c2087d4f771fe40dfe1123596e0;
+              __stripe_mid=ff1713b6-14f3-4d70-a9ca-476f77737db20a5e53;
+              JSESSIONID=45305AC1671CB26429C83FBD64F0052E
+      responses:
+        '200':
+          description: ''
+tags: []
