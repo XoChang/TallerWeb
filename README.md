@@ -97,7 +97,14 @@ pipeline {
 
     }
 }
+
+![image](https://github.com/user-attachments/assets/986758d8-519a-48ff-b66e-0026233cd49f)
+
 ### Análisis Estático
+
+![image](https://github.com/user-attachments/assets/180eff7b-82c4-4e14-b8cd-2081d879b5cb)
+
+
 ## Pruebas Unitarias
 - Desarrollar pruebas unitarias para asegurar que los componentes individuales del sistema funcionen correctamente. Utilizar frameworks de pruebas como JUnit para Java.
 
