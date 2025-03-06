@@ -22,6 +22,8 @@ La arquitectura del sistema está basada en el diseño dirigido por el dominio (
 - **Capa de Dominio:** Contiene la lógica de negocio central, incluyendo entidades, agregados, servicios de dominio y repositorios.
 - **Capa de Infraestructura:** Proporciona implementaciones concretas para los repositorios y otros servicios de infraestructura como la persistencia de datos y la gestión de notificaciones.
 
+<img src="Imagenes/Diagramadecapas.jpeg" alt="Diagrama de capas" width="200"/>
+
 # 3. Principales Servicios REST y Funcionalidades
 ## Módulos del Proyecto
 El sistema se compone de varios módulos clave:
