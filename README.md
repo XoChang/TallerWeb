@@ -10,10 +10,10 @@
 El Sistema de Bolsa de Trabajo es una plataforma diseñada para conectar a estudiantes y empresas, facilitando la gestión integral de ofertas laborales, postulaciones, notificaciones y manejo de documentos
 ### Objetivo
 El objetivo principal del proyecto es desarrollar un sistema que:
-  a) Permita a los usuarios (estudiantes y empresas) gestionar sus perfiles, documentos y credenciales de forma segura.
-  b) Facilite la publicación y administración de ofertas de empleo, permitiendo a las empresas publicar y actualizar sus oportunidades laborales.
-  c) Permita a los estudiantes postularse a las ofertas mediante un proceso automatizado, optimizando la comunicación y seguimiento.
-  d) Implemente una arquitectura en capas basada en Domain-Driven Design (DDD) para lograr alta cohesión, escalabilidad y mantenibilidad.
+  - a) Permita a los usuarios (estudiantes y empresas) gestionar sus perfiles, documentos y credenciales de forma segura.
+  - b) Facilite la publicación y administración de ofertas de empleo, permitiendo a las empresas publicar y actualizar sus oportunidades laborales.
+  - c) Permita a los estudiantes postularse a las ofertas mediante un proceso automatizado, optimizando la comunicación y seguimiento.
+  - d) Implemente una arquitectura en capas basada en Domain-Driven Design (DDD) para lograr alta cohesión, escalabilidad y mantenibilidad.
 # 2. Visión General de Arquitectura
 
 # 3. Principales Servicios REST y Funcionalidades
