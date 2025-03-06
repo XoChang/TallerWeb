@@ -44,6 +44,59 @@ El sistema se compone de varios módulos clave:
 
 # 4. Prácticas de Desarrollo
 ### Construcción Automática
+pipeline {
+    agent any
+    
+    tools {
+        jdk 'JAVA'
+        maven 'maven'
+    }
+    
+    environment{
+        SCANNER_HOME = tool 'sonar-scanner'
+    }
+    
+    stages {
+
+        stage("Git Checkout") {
+            steps {
+               git branch: 'main', changelog: false, poll: false, url: 'https://github.com/XoChang/TallerWeb'
+            }
+        }
+        
+        stage("Build with Maven") {
+            steps {
+                bat "mvn clean compile"
+            }
+        }
+        
+        stage("SonarQube Analysis") {
+            steps {
+                bat """
+                $SCANNER_HOME/bin/sonar-scanner -Dsonar.url=http://localhost:9000/ ^
+                    -Dsonar.login=squ_0975245e87f6c98946889ce1af7e1e9116b0c7e3 ^
+                    -Dsonar.projectKey=my:project ^
+                    -Dsonar.projectName=Myproject ^
+                    -Dsonar.sources=. ^
+                    -Dsonar.java.binaries=target/classes"""
+            }
+        }
+        
+        stage("Run Tests"){
+            steps{
+                bat "mvn test"
+            }
+        }
+        
+        stage("Deploy and Run"){
+            steps{
+                bat "mvn clean package"
+                bat "mvn spring-boot:run"
+            }
+        }
+
+    }
+}
 ### Análisis Estático
 ## Pruebas Unitarias
 - Desarrollar pruebas unitarias para asegurar que los componentes individuales del sistema funcionen correctamente. Utilizar frameworks de pruebas como JUnit para Java.
