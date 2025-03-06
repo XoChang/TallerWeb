@@ -39,6 +39,9 @@ El sistema se compone de varios módulos clave:
 - **Usuario:** Representa a un usuario del sistema (estudiante o empresa) con atributos como nombre, correo electrónico, contraseña, etc.
 - **OfertaLaboral:** Representa una oferta de empleo publicada por una empresa con atributos como título, descripción, requisitos, etc.
 - **Postulacion:** Representa una postulación de un estudiante a una oferta laboral con atributos como fecha de postulación, estado, etc.
+
+<img src="Imagenes/Modelo.jpeg" alt="modelo" style="text-align: center;"/>
+
 # 4. Prácticas de Desarrollo
 ### Construcción Automática
 ### Análisis Estático
@@ -48,5 +51,8 @@ El sistema se compone de varios módulos clave:
 ## Pruebas de API
 - Realizar pruebas de API para verificar que los servicios REST funcionen según lo esperado. Utilizar herramientas como Postman para definir y ejecutar las pruebas.
 
+<img src="Imagenes/postman1.png" alt="postman1" style="text-align: center;"/>
+<br/>
+<img src="Imagenes/postman2.png" alt="postman2" style="text-align: center;"/>
 # 5. Conclusiones
 El Sistema de Bolsa de Trabajo es una plataforma integral que facilita la conexión entre estudiantes y empresas, optimizando la gestión de ofertas laborales y postulaciones. A través de una arquitectura en capas y el uso de prácticas de desarrollo modernas, el sistema busca lograr alta cohesión, escalabilidad y mantenibilidad, proporcionando una experiencia segura y eficiente para todos los usuarios.
