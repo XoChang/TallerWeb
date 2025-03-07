@@ -98,6 +98,11 @@ pipeline {
     }
 }
 
+<img src="Imagenes/jenkins1.jpeg" alt="jenkins1" style="text-align: center;"/>
+<img src="Imagenes/jenkins2.jpeg" alt="jenkins2" style="text-align: center;"/>
+<img src="Imagenes/jenkins3.jpeg" alt="jenkins3" style="text-align: center;"/>
+<img src="Imagenes/jenkins4.jpeg" alt="jenkins4" style="text-align: center;"/>
+
 ![image](https://github.com/user-attachments/assets/986758d8-519a-48ff-b66e-0026233cd49f)
 
 ### Análisis Estático
