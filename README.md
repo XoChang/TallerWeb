@@ -114,5 +114,6 @@ pipeline {
 <img src="Imagenes/postman1.png" alt="postman1" style="text-align: center;"/>
 <br/>
 <img src="Imagenes/postman2.png" alt="postman2" style="text-align: center;"/>
-# 5. Conclusiones
+
+# 1. Conclusiones
 El Sistema de Bolsa de Trabajo es una plataforma integral que facilita la conexión entre estudiantes y empresas, optimizando la gestión de ofertas laborales y postulaciones. A través de una arquitectura en capas y el uso de prácticas de desarrollo modernas, el sistema busca lograr alta cohesión, escalabilidad y mantenibilidad, proporcionando una experiencia segura y eficiente para todos los usuarios.
